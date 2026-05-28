@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary-950 text-primary-50 font-sans antialiased;
+    background-image:
+      radial-gradient(at 0% 0%, rgba(255, 255, 255, 0.01) 0, transparent 50%),
+      radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.02) 0, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(255, 255, 255, 0.01) 0, transparent 50%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display tracking-tight text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-white hover:bg-zinc-100 text-primary-950 font-bold py-2.5 px-5 rounded-xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-sm flex items-center justify-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply bg-primary-800/80 hover:bg-primary-800 text-primary-50 border border-white/5 font-semibold py-2.5 px-5 rounded-xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2;
+  }
+
+  .card {
+    @apply bg-primary-900/60 backdrop-blur-md rounded-2xl border border-white/5 p-6 transition-all duration-300 hover:border-white/10 hover:bg-primary-900/80 shadow-card;
+  }
+
+  .glass-panel {
+    @apply bg-primary-900/60 backdrop-blur-md border border-white/5 shadow-card;
+  }
+}
+
+@layer utilities {
+  .shadow-card {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Custom Scrollbar for Obsidian theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272A;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3F3F46;
+}
+
+/* Hide scrollbar utility */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
