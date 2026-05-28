@@ -7,7 +7,7 @@ const AboutSection = () => {
         AETHER &copy; {new Date().getFullYear()}
       </p>
       <p className="text-[9px] text-primary-200 mt-2 tracking-[0.1em] uppercase font-bold">
-        Bespoke Talent Alignment Calibration Services &bull; Powered by Gemini AI
+        Hybrid AI recruitment intelligence &bull; Gemini parsing + ML scoring
       </p>
     </footer>
   );

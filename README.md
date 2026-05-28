@@ -5,7 +5,7 @@
 <h1 align="center">AETHER - AI-Powered Recruitment System</h1>
 
 <p align="center">
-  <strong>An intelligent ATS that parses resumes, scores candidates with configurable weights, and provides explainable analytics powered by a Python ML service and Gemini.</strong>
+  <strong>A hybrid AI recruitment intelligence platform that combines Gemini-powered resume parsing with adaptive ML-based candidate scoring and explainable analytics.</strong>
 </p>
 
 <p align="center">
@@ -49,14 +49,16 @@ Result: Slow pipelines, noisy shortlists, and weak hiring insights.
 
 ## Our Solution
 
-AETHER combines a modern MERN stack with a dedicated ML microservice and Gemini to deliver:
+AETHER combines a modern MERN stack with Gemini-powered extraction and a dedicated ML scoring service to deliver:
 
 | Principle | How AETHER Implements It |
 |---|---|
-| Automation | Resume PDF parsing and structured candidate extraction with Gemini |
+| Automation | Resume PDF parsing and structured candidate extraction through a Gemini-based pipeline |
 | Consistency | Configurable weighted scoring for experience, skills, and education |
 | Transparency | Score breakdowns and chart-based visual analytics |
 | Continuous Learning | Fine-tuning weights based on HR ratings |
+
+AETHER is a hybrid AI recruitment intelligence platform that combines Gemini-powered resume parsing with adaptive ML-based candidate scoring. The platform extracts structured candidate profiles from resumes, evaluates applicants through configurable weighted scoring pipelines, and continuously improves recruiter alignment through feedback-driven learning models.
 
 ---
 
@@ -70,6 +72,17 @@ AETHER combines a modern MERN stack with a dedicated ML microservice and Gemini 
 ---
 
 ## Scoring Model - How It Works
+
+Workflow (end-to-end):
+
+1. Resume Upload
+2. PDF Text Extraction
+3. Gemini NLP Parsing
+4. Structured Candidate Features
+5. Weighted Scoring Engine
+6. Candidate Ranking
+7. Recruiter Feedback
+8. Adaptive Weight Optimization
 
 ### Step 1: Candidate Feature Extraction
 
@@ -171,7 +184,7 @@ AETHER/
 
 ### ML and AI
 - Weighted scoring with benchmarks
-- Gemini-based resume parsing
+- Gemini-powered resume parsing and structured capability profiles
 - Fine-tuning weights based on HR ratings
 - Explainable scoring summaries
 

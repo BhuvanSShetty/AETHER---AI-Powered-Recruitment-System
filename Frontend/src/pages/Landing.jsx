@@ -21,12 +21,12 @@ const Landing = () => {
         <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white font-display max-w-4xl mx-auto leading-tight">
           Bespoke Talent Alignment <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-500">
-            Calibration Services
+            Platform
           </span>
         </h1>
 
         <p className="text-base sm:text-lg text-primary-200 mt-6 max-w-2xl mx-auto font-medium font-sans leading-relaxed">
-          Initialize standard NLP embedding cycles and Google Gemini models to parse resumes, recalibrate scoring weights, and benchmark candidates with absolute fidelity.
+          Activate a Gemini-powered resume extraction pipeline, tune weighted scoring models, and rank candidates through explainable AI evaluation.
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-10">
@@ -52,7 +52,7 @@ const Landing = () => {
           <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#A3A3A3] font-sans">System Overview</p>
           <h2 className="text-3xl font-extrabold text-white mt-2 tracking-tight">How AETHER Works</h2>
           <p className="text-xs text-primary-200 mt-2 max-w-md mx-auto leading-relaxed">
-            Four calibrated cycles designed to eliminate generic spreadsheet tracking and deliver editorial applicant clarity.
+            A hybrid AI workflow that moves from resume upload to adaptive weight optimization.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ const Landing = () => {
               </div>
               <h3 className="font-extrabold text-white text-base tracking-tight mb-2">Import Benchmarks</h3>
               <p className="text-xs text-primary-200 leading-relaxed font-sans font-medium">
-                Upload up to 12 top-performer profiles to establish a "Gold Standard" baseline. The model parses experience, educational metrics, and capability matrices.
+                Upload up to 12 top-performer profiles to establish a "Gold Standard" baseline. The system extracts experience, education, and structured capability profiles.
               </p>
             </div>
             <div className="mt-4 pt-4 border-t border-white/5 flex items-center gap-1.5 text-[9px] font-extrabold text-primary-200 uppercase tracking-wider">
@@ -82,7 +82,7 @@ const Landing = () => {
               </div>
               <h3 className="font-extrabold text-white text-base tracking-tight mb-2">Tune Engine Priorities</h3>
               <p className="text-xs text-primary-200 leading-relaxed font-sans font-medium">
-                Calibrate the scoring engine sliders directly from the workspace sidebar. Dynamically adjust weights assigned to experience, skill matches, or educational prestige.
+                Calibrate weighted scoring directly from the workspace sidebar. Dynamically adjust recruiter priorities across experience, skills, and educational benchmarks.
               </p>
             </div>
             <div className="mt-4 pt-4 border-t border-white/5 flex items-center gap-1.5 text-[9px] font-extrabold text-primary-200 uppercase tracking-wider">
@@ -96,9 +96,9 @@ const Landing = () => {
               <div className="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center mb-5 text-white font-extrabold text-xs">
                 03
               </div>
-              <h3 className="font-extrabold text-white text-base tracking-tight mb-2">AI Alignment Scan</h3>
+              <h3 className="font-extrabold text-white text-base tracking-tight mb-2">AI Candidate Evaluation</h3>
               <p className="text-xs text-primary-200 leading-relaxed font-sans font-medium">
-                Add applicant resumes to the active console. Resumes are immediately parsed by our dedicated Python NLP microservice and rated through Google Gemini.
+                Applicant resumes are parsed through a Gemini-powered NLP pipeline and evaluated by AETHER's adaptive scoring engine.
               </p>
             </div>
             <div className="mt-4 pt-4 border-t border-white/5 flex items-center gap-1.5 text-[9px] font-extrabold text-primary-200 uppercase tracking-wider">
@@ -112,9 +112,9 @@ const Landing = () => {
               <div className="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center mb-5 text-white font-extrabold text-xs">
                 04
               </div>
-              <h3 className="font-extrabold text-white text-base tracking-tight mb-2">Editorial Dossier</h3>
+              <h3 className="font-extrabold text-white text-base tracking-tight mb-2">Candidate Evaluation Report</h3>
               <p className="text-xs text-primary-200 leading-relaxed font-sans font-medium">
-                Review complete candidate portfolios. Cross-compare candidate qualifications with high-contrast radar charts, AI summary reports, and star-rating calibration feedbacks.
+                Review ranked candidate portfolios with explainable score breakdowns, AI-generated summaries, radar chart analytics, and recruiter calibration feedback.
               </p>
             </div>
             <div className="mt-4 pt-4 border-t border-white/5 flex items-center gap-1.5 text-[9px] font-extrabold text-primary-200 uppercase tracking-wider">
@@ -132,7 +132,7 @@ const Landing = () => {
             <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#A3A3A3] font-sans">Engineering Specs</p>
             <h2 className="text-3xl font-extrabold text-white mt-2 tracking-tight">The AETHER Pipeline</h2>
             <p className="text-xs text-primary-200 mt-4 leading-relaxed font-sans font-medium">
-              We reject the generic administrative grids typical of hiring platforms. AETHER is built as a highly tactile control deck powered by standard AI systems and modern frameworks:
+              We reject the generic administrative grids typical of hiring platforms. AETHER is built as a highly tactile control deck powered by hybrid AI systems and modern frameworks:
             </p>
 
             <div className="space-y-4 mt-8">
@@ -150,8 +150,8 @@ const Landing = () => {
                   <Sliders className="w-3 h-3 text-white" />
                 </div>
                 <div className="text-xs">
-                  <strong className="text-white font-bold block mb-0.5">MERN + Python FastAPI Microservice</strong>
-                  Dedicated machine learning regression pipelines model weights and fine-tune priority variables.
+                  <strong className="text-white font-bold block mb-0.5">MERN + Python FastAPI Scoring Service</strong>
+                  The scoring engine computes weighted evaluations and fine-tunes priorities from recruiter feedback.
                 </div>
               </div>
             </div>
@@ -178,7 +178,7 @@ const Landing = () => {
           AETHER &copy; {new Date().getFullYear()}
         </p>
         <p className="text-[9px] text-primary-200 mt-2 tracking-[0.1em] uppercase font-bold">
-          Bespoke Talent Alignment Calibration Services &bull; Powered by Gemini AI
+          Hybrid AI recruitment intelligence &bull; Gemini parsing + ML scoring
         </p>
       </footer>
 
