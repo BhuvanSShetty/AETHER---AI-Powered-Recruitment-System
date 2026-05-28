@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Frontend/src/assets/images/logo1.jpg" alt="AETHER Logo" width="280" />
+  <img src="Assets/logo.png" alt="AETHER Logo" width="280" />
 </p>
 
 <h1 align="center">AETHER - AI-Powered Recruitment System</h1>
@@ -296,14 +296,14 @@ ENCRYPTION_KEY=32_characters_long_key_here
 
 ## Screenshots and UI Flow
 
-Add screenshots under `Frontend/src/assets/images` and update the paths below.
+Screenshots are stored in `Assets/` and referenced below.
 
 <p align="center">
-  <img src="Frontend/src/assets/images/login.png" alt="Login" width="900" />
+  <img src="Assets/Login.png" alt="Login" width="900" />
 </p>
 
 <p align="center">
-  <img src="Frontend/src/assets/images/dashboard.png" alt="Dashboard" width="900" />
+  <img src="Assets/Dashboard.png" alt="Dashboard" width="900" />
 </p>
 
 ---
