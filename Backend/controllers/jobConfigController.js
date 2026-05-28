@@ -1,6 +1,8 @@
 import JobConfig from '../models/JobConfig.js';
+import User from '../models/User.js';
 import { extractTextFromPDF } from '../utils/resumeParser.js';
 import { parseResumeWithGemini } from '../services/geminiService.js';
+import { decrypt } from '../utils/encryption.js';
 
 // 1. Create & Train New Job Config
 export const createJobConfig = async (req, res) => {
@@ -39,6 +41,17 @@ export const createJobConfig = async (req, res) => {
         let fileCount = 0;
         let collectedSkills = new Set(); 
 
+        const user = await User.findById(req.user.id);
+        let decryptedKey = null;
+        if (user && user.geminiApiKey && user.geminiApiKey.content) {
+            try {
+                decryptedKey = decrypt(user.geminiApiKey);
+                console.log("User API Key decrypted successfully.");
+            } catch (err) {
+                console.error("Key Decryption Failed:", err.message);
+            }
+        }
+
         if (req.files && req.files.length > 0) {
             console.log(`\nPROCESSING ${req.files.length} BENCHMARK RESUMES (TRAINING MODEL)...`);
             
@@ -52,7 +65,7 @@ export const createJobConfig = async (req, res) => {
                         continue;
                     }
 
-                    const parsed = await parseResumeWithGemini(text);
+                    const parsed = await parseResumeWithGemini(text, decryptedKey);
                     
                     const exp = parsed.years_experience || 0;
                     const tier = parsed.education_tier || 2;

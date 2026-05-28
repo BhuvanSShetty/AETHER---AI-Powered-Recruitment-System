@@ -1,14 +1,13 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-// Verify API Key existence
-if (!process.env.GEMINI_API_KEY || process.env.GEMINI_API_KEY === 'your_google_gemini_key') {
-    console.error("CRITICAL: GEMINI_API_KEY is missing or invalid in .env file");
-    console.error("Please set a valid Google Gemini API key at: https://makersuite.google.com/app/apikey");
-}
+const parseResumeWithGemini = async (resumeText, apiKey) => {
+    const resolvedKey = apiKey || process.env.GEMINI_API_KEY;
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+    if (!resolvedKey || resolvedKey === 'your_google_gemini_key') {
+        throw new Error("Missing Gemini API key. Please save your key in settings or configure GEMINI_API_KEY.");
+    }
 
-const parseResumeWithGemini = async (resumeText) => {
+    const genAI = new GoogleGenerativeAI(resolvedKey);
     const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const prompt = `
@@ -56,7 +55,7 @@ const parseResumeWithGemini = async (resumeText) => {
         
         // Check if it's an authentication error
         if (error.message?.includes('API key') || error.message?.includes('authentication') || error.message?.includes('401') || error.message?.includes('400')) {
-            throw new Error("Invalid or missing GEMINI_API_KEY. Please configure a valid Google Gemini API key in your .env file. Get one at: https://makersuite.google.com/app/apikey");
+            throw new Error("Invalid or missing Gemini API key. Please verify your key or server configuration.");
         }
         
         // If it was a JSON parse error, it means the cleaning logic failed or Gemini returned garbage.

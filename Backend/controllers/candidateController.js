@@ -35,7 +35,18 @@ export const uploadResume = async (req, res) => {
 
         // Step 2: AI Parse
         console.log("[2/3] Parsing text with Gemini AI...");
-        const parsedData = await parseResumeWithGemini(resumeText);
+        const user = await User.findById(req.user.id);
+        let decryptedKey = null;
+        if (user && user.geminiApiKey && user.geminiApiKey.content) {
+            try {
+                decryptedKey = decrypt(user.geminiApiKey);
+                console.log("User API Key decrypted successfully.");
+            } catch (err) {
+                console.error("Key Decryption Failed:", err.message);
+            }
+        }
+
+        const parsedData = await parseResumeWithGemini(resumeText, decryptedKey);
         console.log("AI Parsing successful.");
 
         // Step 3: Create Candidate
