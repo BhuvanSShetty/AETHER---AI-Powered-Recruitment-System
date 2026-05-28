@@ -308,16 +308,6 @@ Screenshots are stored in `Assets/` and referenced below.
 
 ---
 
-## Team
-
-| Name | Email |
-|------|-------|
-| Bhuvan S Shetty | bhuvansshetty90@gmail.com |
-| Chirag | anandchirag24@gmail.com |
-| Bhavani K S | krupaintros@gmail.com |
-| Sialampalli | sialampalli2005@gmail.com |
-
----
 
 <p align="center">
   <strong>Built for faster, fairer, and more explainable hiring.</strong>
