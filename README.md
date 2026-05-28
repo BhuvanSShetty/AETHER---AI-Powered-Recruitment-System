@@ -62,35 +62,10 @@ AETHER combines a modern MERN stack with a dedicated ML microservice and Gemini 
 
 ## System Architecture
 
-```
-                  +-------------------------------------------+
-                  |               FRONTEND (React)           |
-                  |        Vite + Tailwind + Router          |
-                  |   Auth  |  Dashboard  |  Candidates      |
-                  +----------+----------------+--------------+
-                             | HTTP/REST
-                  +----------v------------------------------+
-                  |              BACKEND (Express)          |
-                  |                                           |
-                  | Auth --- Job Config --- Candidate APIs    |
-                  |   |             |             |           |
-                  |   |             |             +----+      |
-                  |   |             |                  |      |
-                  |   +-------------+------------------v      |
-                  |                 ML Service Bridge         |
-                  +-------------------------+-----------------+
-                                            |
-                                            v
-                             +-------------------------------+
-                             |       ML SERVICE (FastAPI)    |
-                             |  /predict  |  /fine_tune       |
-                             +-------------------------------+
-                                            |
-                                            v
-                                      +-----------+
-                                      | MongoDB   |
-                                      +-----------+
-```
+
+<p align="center">
+  <img src="Assets/System%20Design.png" alt="System Design" width="900" />
+</p>
 
 ---
 
